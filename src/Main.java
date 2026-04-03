@@ -6,8 +6,9 @@ public class Main {
         // show menu, read input, run action
 
         System.out.println("Welcome to Tarot!");
-        System.out.println("1 — Draw a card");
-        System.out.println("2 — Quit");
+        System.out.println("1 - Draw a card");
+        System.out.println("2 - Quit");
+        System.out.print("Your choice: ");
 
         Scanner choice = new Scanner(System.in);
         int choiceMade = choice.nextInt();
@@ -28,13 +29,13 @@ public class Main {
 
             if (reversed) {
                 System.out.println("\nYour card: " + name + " (reversed)\n");
-                System.out.println("Themes: " + card.getCard().getUprightMeaning() + "\n");
+                System.out.println("Themes: " + card.getCard().getReversedMeaning() + "\n");
             } else {
                 System.out.println("\nYour card: " + name + " (upright)\n");
                 System.out.println("Themes: " + card.getCard().getUprightMeaning() + "\n");
             }
 
-            System.out.println("Press 1 for another card \n(anything else to quit)");
+            System.out.println("Press 1 for another card \n(anything else to quit)\n");
             choiceMade = choice.nextInt();
 
         }
